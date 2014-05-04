@@ -1,11 +1,11 @@
-var Edge = function (knowns, labels, discoverables, authors, contexts, sequences, queries) {
-  this.knowns = knowns
-  this.labels = labels
-  this.discoverables = discoverables
-  this.authors = authors
-  this.contexts = contexts
-  this.sequences = sequences
-  this.queries = queries
+var Edge = function (edge) {
+  this.knowns = edge.knowns
+  this.labels = edge.labels
+  this.discoverables = edge.discoverables
+  this.authors = edge.authors
+  this.contexts = edge.contexts
+  this.sequences = edge.sequences
+  this.queries = edge.queries
 }
 
 Edge.prototype = {
@@ -32,7 +32,8 @@ CommonsContentID = function (binaryArray) {
   this.binaryID = "hash of "+ binaryArray
 }
 
+module.exports = Edge
 
-var e = new Edge(['asdf'], ['is'], ['gibberish'])
-console.log(e)
-console.log(e.getContentID())
+//var e = new Edge(['asdf'], ['is'], ['gibberish'])
+//console.log(e)
+//console.log(e.getContentID())
