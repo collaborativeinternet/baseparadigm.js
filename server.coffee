@@ -1,8 +1,8 @@
 express = require 'express'
-Edge = require './BaseParadigm'
+{Edge} = require './BaseParadigm'
 app = express()
 
-app.use(express.bodyParser())
+app.use express.bodyParser()
 
 app.options '/', (req, res) ->
   res.header 'Access-Control-Allow-Origin', '*'

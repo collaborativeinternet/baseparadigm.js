@@ -1,4 +1,3 @@
-
 class Edge 
   constructor: (data) ->
     @knowns =        data.knowns?[...]        ? []
@@ -21,8 +20,7 @@ class Edge
     return "the bytes"
 
   getContentID: ->
-    @contentID = new CommonsContentID(@getBytes())
-    return this.contentID
+    @contentID = new CommonsContentID @getBytes()
 
   save: ->
     console.log "saving"
@@ -36,7 +34,7 @@ CommonsContentID = (binaryArray) ->
   # this.binaryID = "the hash"
   @binaryID = "hash of "+ binaryArray
 
-module.exports = Edge
+module.exports = {Edge}
 
 #var e = new Edge(['asdf'], ['is'], ['gibberish'])
 #console.log(e)
