@@ -1,5 +1,5 @@
 express = require 'express'
-Edge = require './BaseParadigm.js'
+Edge = require './BaseParadigm'
 app = express()
 
 app.use(express.bodyParser())
@@ -13,6 +13,7 @@ app.options '/', (req, res) ->
 app.put '/', (req, res) ->
   res.header 'Access-Control-Allow-Origin', '*'
   edge = new Edge req.body
+  edge.save()
   console.log edge
   console.log edge.getContentID()
 
