@@ -1,7 +1,7 @@
 baseparadigm.js
 ===============
 
-JavaScript implementation of BaseParadigm
+JavaScript implementation of [BaseParadigm](http://BaseParadigm.org)
 
 Installing
 ----------
